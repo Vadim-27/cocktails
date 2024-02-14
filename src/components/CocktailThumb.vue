@@ -32,5 +32,8 @@ const props = defineProps({
 .name
     margin-top: 15px
     letter-spacing: 0.1em
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
       
 </style>
