@@ -6,7 +6,7 @@ import { computed, ref } from "vue";
 import { COCKTAILS_BY_ID } from "../constants";
 
 const route = useRoute();
-const router = useRouter();
+
 const cocktail = ref(null);
 
 const cocktailId = computed(() => route.path.split("/").pop())
@@ -16,9 +16,6 @@ const getCocktailById = async () => {
     cocktail.value = data?.data?.drinks[0];
 }
 
-const goBack = () => {
-    router.go(-1);
-}
 
 getCocktailById();
 
@@ -39,7 +36,7 @@ const ingredientsAndMeasures = computed(() => {
 
 <template>
     <div v-if="cocktail" class="wrap">
-    <AppLayout  :imgUrl="cocktail.strDrinkThumb" :backFunc="goBack">
+    <AppLayout  :imgUrl="cocktail.strDrinkThumb" >
     <div class="wrapper"></div>
     <section class="info">
       <h1 class="title">{{ cocktail.strDrink }}</h1>
