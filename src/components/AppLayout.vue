@@ -84,6 +84,7 @@ const goBack = () => {
     z-index: 100;
 
     @media screen and (min-width: 480px) {
+        width: 50vw;
         min-height: 100vh;
     }
 }
