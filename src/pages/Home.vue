@@ -83,7 +83,7 @@ const removeIngredient = () => {
   width: 220px
 
 .text
-  min-width: 516px
+  max-width: 516px
   margin: 0 auto
   padding-top: 50px
   line-height: 36px
